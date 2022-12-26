@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="">Toatl Bill</label>
+            <input type="number" id="total-bill">
+        </div>
+        <div>
+            <button id="five-percent" class="clicked" onclick="calculate()">5%</button>
+            <button id="ten-percent" class="clicked" onclick="calculate()">10%</button>
+            <button id="fifteen-percent" class="clicked" onclick="calculate()">15%</button>
+            <button id="twenty-percent" class="clicked" onclick="calculate()">20%</button>
+        </div>
+        <div>
+            <label for="">No of People</label>
+            <input type="number" id="total-people">
+        </div>
+        <div>
+            <span id="result-five"></span>
+        </div>
+    </div>
+
+    <script>
+
+        
+        function calculate(){
+            console.log("Button clicked");
+            var totalBill = document.getElementById("total-bill").value;
+            console.log(totalBill);
+
+            var output = 0
+
+            var outputFive = document.getElementById("five-percent");
+            var outputTen = document.getElementById("ten-percent");
+            var outputFifteen = document.getElementById("fifteen-percent");
+            var outputTwenty = document.getElementById("twenty-percent");
+            if(outputFive){
+                output = output + parseFloat(totalBill * 0.05);
+                console.log(output);
+            }else if(outputTen){
+                output = output + parseFloat(totalBill * 0.10);
+                console.log(output);
+            }else if(outputFifteen){
+                output = output + parseFloat(totalBill * 0.15);
+                console.log(output);
+            }else if(outputTwenty){
+                output = output + parseFloat(totalBill * 0.20);
+                console.log(output);
+            }else if(outputFive && outputTen){
+                output = output + parseFloat(totalBill * 0.05 * 0.10);
+                console.log(output);
+            }else if(outputFive && outputFifteen){
+                output = output + parseFloat(totalBill * 0.05 * 0.15);
+                console.log(output);
+            }else if(outputFive && outputTwenty){
+                output = output + parseFloat(totalBill * 0.05 * 0.20);
+                console.log(output);
+            }else if(outputTen && outputFifteen){
+                output = output + parseFloat(totalBill * 0.10 * 0.15);
+                console.log(output);
+            }else if(outputTen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.10 * 0.20);
+                console.log(output);
+            }else if(outputFifteen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.15 * 0.20);
+                console.log(output);
+            }else if(outputFive && outputTen && outputFifteen){
+                output = output + parseFloat(totalBill * 0.05 * 0.10 * 0.15);
+                console.log(output);
+            }else if(outputFive && outputTen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.05 * 0.10 * 0.20);
+                console.log(output);
+            }else if(outputFive && outputFifteen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.05 * 0.15 * 0.20);
+                console.log(output);
+            }else if(outputTen && outputFifteen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.10 * 0.15 * 0.20);
+                console.log(output);
+            }else if(outputFive && outputTen && outputFifteen && outputTwenty){
+                output = output + parseFloat(totalBill * 0.05 * 0.10 * 0.15 * 0.20);
+                console.log(output);
+            }else{
+                output = output + 0
+                console.log(output);
+            }
+        }
+        
+        // Five Percent calculation
+        let outputFive = 0;
+        // function calculateFive(){
+        //     console.log("5% button clicked");
+        //     let totalBill = document.getElementById("total-bill").value;
+        //     outputFive = outputFive + parseFloat(totalBill * 0.05);
+        //     document.getElementById("result-five").innerHTML = outputFive;
+        // }
+        // console.log(outputFive);
+
+        // // ten percent calculation
+        // let outputTen = 0;
+        // function calculateTen(){
+        //     let totalBill = document.getElementById("total-bill").value;
+        //     console.log("10% button clicked");
+        //     outputTen = outputTen + parseFloat(totalBill * 0.1)
+        //     console.log(outputTen)
+        // }
+        // console.log(outputTen)
+
+        // // 15% button clicked
+        // let outputFifteen = 0;
+        // function calculateFifteen(){
+        //     let totalBill = document.getElementById("total-bill").value;
+        //     console.log("15% button clicked");
+        //     outputFifteen = outputFifteen + parseFloat(totalBill * 0.15)
+        //     console.log(outputFifteen);
+        // }
+        // console.log(outputFifteen)
+
+        // // 20% button clicked  .toFixed(2)
+        // let outputTwenty = 0;
+        // function calculateTwenty(){
+        //     let totalBill = document.getElementById("total-bill").value;
+        //     console.log("20% button clicked");
+        //     outputTwenty = outputTwenty + parseFloat(totalBill * 0.20);
+        //     console.log(outputTwenty);
+        // }
+        // console.log(outputTwenty)
+
+        // let TotalAmount = 0;
+        // TotalAmount = TotalAmount + outputFive + outputTen + outputFifteen + outputTwenty;
+        // console.log(TotalAmount);
+        
+        
+    </script>
+</body>
+</html>
